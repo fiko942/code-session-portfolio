@@ -1,12 +1,12 @@
 import Container from "@/component/Container";
+import '../styles/app.css'
 
 export default function App({ Component, pageProps }) {
     return (
         <>
             <Container>
-                <h2>h2</h2>
+                <Component {...pageProps} />
             </Container>
-             <Component {...pageProps} />
         </>
     )
 }
