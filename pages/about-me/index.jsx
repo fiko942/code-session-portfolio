@@ -66,6 +66,12 @@ export default function AboutMe() {
                 </div>
             </section>
             {/* END OF SKILLS */}
+            {/* BEGIN FUNFACTS */}
+            <section id="funfacts">
+                <h3 className='text-center font-semibold text-lg mt-10'>Fun Fact</h3>
+                <p className='italic text-md font-semibold text-gray-500 w-[350px] max-w-full text-center mx-auto mt-12'>〝Ketika saya mandi saya tidak suka menggunakan handuk, biasanya saya menggunakan tisu sebanyak banyaknya untuk mengeringkan badan dan juga rambut saya.〞</p>
+            </section>
+            {/* END OF FUNFACTS */}
         </div>
     )
 }
