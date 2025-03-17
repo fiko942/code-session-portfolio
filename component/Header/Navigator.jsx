@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import MenuIcon from '@mui/icons-material/Menu';
 import isMobileScreen from "@/utils/isMobileScreen";
 import MobileRoutes from "./MobileRoutes";
+import DesktopRoutes from "./DesktopRoutes";
 
 export default function Navigator() {
     const [isMobile, setIsMobile] = useState(true)
@@ -40,6 +41,6 @@ export default function Navigator() {
 
     // For the desktop navigator
     return (
-        <></>
+        <DesktopRoutes />
     )
 }
