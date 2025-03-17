@@ -1,9 +1,11 @@
 import constants from '../../constants/about-me'
 import socials from '@/constants/socials'
+import StarIcon from '@mui/icons-material/Star';
 
 export default function AboutMe() {
     return (
         <div className="about-me--page">
+            {/* BEGIN MY PROFILE */}
             <section id="my-profile">
                 <div className='flex w-fit flex-col mx-auto mt-12 border-2 border-gray-200 p-6 rounded-xl shadow-2xl'>
                     <img
@@ -32,6 +34,38 @@ export default function AboutMe() {
                     </div>
                 </div>
             </section>
+            {/* END OF MY PROFILE */}
+            {/* BEGIN SKILLS */}
+            <section id="skils">
+                <h3 className='text-center font-semibold text-lg mt-10'>My Skills</h3>
+                <div className='flex flex-col items-center mt-2'>
+                    <div className="skill-items grid grid-cols-2 gap-4">
+                        {constants.skills.map((skill, index) => (
+                            <div
+                                key={index}
+                                className='bg-white shadow-white-300 shadow-md rounded-lg px-4 py-2'
+                            >
+                                <span className='font-semibold text-gray-600'>{skill.name}</span>
+                                <div className="grade-container">
+                                    {Array.from({ length: skill.grade }).map((_, index) => (
+                                        <StarIcon
+                                            key={index}
+                                            className='text-yellow-500'
+                                        />
+                                    ))}
+                                    {Array.from({ length: 5 - skill.grade }).map((_, index) => (
+                                        <StarIcon
+                                            key={index}
+                                            className='text-gray-400'
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            {/* END OF SKILLS */}
         </div>
     )
 }
