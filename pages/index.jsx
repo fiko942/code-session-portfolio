@@ -1,7 +1,7 @@
+import AboutMe from "./about-me";
+
 export default function Home() {
     return (
-        <div>
-            <h1>Hai Wiji Fiko Teren</h1>
-        </div>
+        <AboutMe />
     )
 }
