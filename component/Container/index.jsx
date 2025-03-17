@@ -5,6 +5,7 @@ export default function Container({ children }) {
     return (
         <div className="container--app">
             <Header />
+            {children}
             <Footer />
         </div>
     )
