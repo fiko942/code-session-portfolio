@@ -10,6 +10,7 @@ export default function MobileRoutes({ open, onClose }) {
         setWindowHeight(window.innerHeight)
     }, [open])
 
+
     return (
         <div className="mobile-routes" style={{
             width: '100vw',
@@ -31,6 +32,7 @@ export default function MobileRoutes({ open, onClose }) {
                         key={index}
                         className="cursor-pointer"
                         href={route.path}
+                        onClick={onClose}
                     >
                         <div className="flex items-center gap-2">
                             <img 
